@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baroz AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .chat-container {
+            width: 375px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .top-bar {
+            background: lightblue;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .logo img {
+            width: 30px;
+            height: 30px;
+        }
+        .chat-box {
+            flex: 1;
+            padding: 10px;
+            background: #DCF3F1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-message {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .user-message {
+            justify-content: flex-start;
+        }
+        .bot-message {
+            justify-content: flex-end;
+        }
+        .message-content {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 10px;
+            max-width: 70%;
+        }
+        .bot-message .message-content {
+            background: #DCF3F1;
+        }
+        .user-icon, .bot-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+        .chat-input-area {
+            display: flex;
+            padding: 10px;
+            background: white;
+            border-top: 1px solid #ddd;
+        }
+        .chat-input {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        .send-button {
+            background: lightblue;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .file-upload {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="top-bar">
+            <div class="status-icons">📶 🔋 📡</div>
+            <div class="header-title">Baroz AI Assistant</div>
+            <div class="logo"><img src="baroz_logo.png" alt="Logo"></div>
+        </div>
+        <div class="chat-box">
+            <div class="chat-message user-message">
+                <img src="duck.jpeg" alt="User" class="user-icon">
+                <div class="message-content">Hello!</div>
+            </div>
+            <div class="chat-message bot-message">
+                <div class="message-content">Hi there! How can I assist you?</div>
+                <img src="baroz_logo.png" alt="Bot" class="bot-icon">
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" placeholder="Type a message..." class="chat-input">
+            <button class="send-button">Send</button>
+        </div>
+        <div class="file-upload">
+            <input type="file" id="fileInput" accept=".csv">
+        </div>
+    </div>
+</body>
+</html>
